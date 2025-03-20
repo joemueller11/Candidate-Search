@@ -6,17 +6,34 @@ import CandidateCard from '../components/CandidateCard';
 const CandidateSearch = () => {
   const [currentCandidate, setCurrentCandidate] = useState<Candidate | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const loadNextCandidate = async () => {
-    setLoading(true);
-    const users = await searchGithub();
-    if (users.length > 0) {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      const users = await searchGithub();
+      if (!users || users.length === 0) {
+        setCurrentCandidate(null);
+        setError('No candidates found');
+        return;
+      }
+
       const userDetails = await searchGithubUser(users[0].login);
+      if (!userDetails || !userDetails.login) {
+        setError('Failed to load candidate details');
+        return;
+      }
+
       setCurrentCandidate(userDetails);
-    } else {
+    } catch (err) {
+      console.error('Error in loadNextCandidate:', err);
+      setError(err instanceof Error ? err.message : 'Error loading candidate');
       setCurrentCandidate(null);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const handleAccept = () => {
@@ -32,7 +49,11 @@ const CandidateSearch = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading candidate information...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
   }
 
   return (

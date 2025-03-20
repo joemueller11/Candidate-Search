@@ -14,7 +14,7 @@ const SavedCandidates = () => {
     return (
       <div>
         <h1>Potential Candidates</h1>
-        <p>No candidates have been accepted yet.</p>
+        <p>No candidates Saved.</p>
       </div>
     );
   }
