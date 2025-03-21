@@ -17,8 +17,8 @@ npm start in the terminal to start the application.
 
 User can add or delete Github candidate profiles using the "-" and "+" button. 
 
-![Candidates Search Page](src\assets\Candidates_search.png)
-![Candidates Pages](src\assets\Candidates_page.png)
+![Candidates Search Page](Candidates_search.png)
+![Candidates Pages](Candidates_search.png)
 
 Render Link:https://candidate-search-qtaj.onrender.com
 
