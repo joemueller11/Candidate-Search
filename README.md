@@ -1,33 +1,40 @@
-# React + TypeScript + Vite
+# CANDIDATE SEARCH
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Candidate search application that calls the GitHub API and renders data in the browser.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Installation
+Using Node JS npm install for "dependencies".
+npm start in the terminal to start the application.
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Usage
 
-* Configure the top-level `parserOptions` property as follows:
+User can add or delete Github candidate profiles using the "-" and "+" button. 
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![Candidates Search Page](./Candidates_search.png)
+![Candidates Pages](./Candidates_pages.png)
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+Render Link:https://candidate-search-qtaj.onrender.com
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.# Candidate-Search
+## License
+MIT License
+
+Copyright (c) [2025] [Joseph Mueller]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## How to Contribute
+The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard.
+
+## Tests
+npm run dev in the terminal after install dependencies.
